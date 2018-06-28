@@ -1,0 +1,848 @@
+09:09:51 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+09:09:51 | Request finished in 223.428ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Request starting HTTP/1.1 GET http://localhost:27945/swagger  
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Request finished in 1.512ms 301 
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Request finished in 32.271ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/swagger-ui.css  
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/swagger-ui-bundle.js  
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/swagger-ui-standalone-preset.js  
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+-------------------------------------------------------------------------------------------------------------------------
+09:09:58 | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+-------------------------------------------------------------------------------------------------------------------------
+09:09:59 | Request finished in 477.745ms 200 application/javascript
+-------------------------------------------------------------------------------------------------------------------------
+09:09:59 | Request finished in 546.227ms 200 text/css
+-------------------------------------------------------------------------------------------------------------------------
+09:09:59 | Request finished in 642.322ms 200 application/javascript
+-------------------------------------------------------------------------------------------------------------------------
+09:09:59 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+09:09:59 | Request finished in 181.037ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+09:10:21 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+09:10:21 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+09:10:24 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+09:10:35 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 14435.919ms
+-------------------------------------------------------------------------------------------------------------------------
+09:10:36 | POST | /api/Authorize/Auth/Email | Object reference not set to an instance of an object.
+   at CiklumTest.Services.LoginService.<GetIdentity>d__7.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Services/ILoginService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at CiklumTest.Controllers.AuthorizeController.<Email>d__3.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Controllers/AuthorizeController.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at CiklumTest.Middleware.ErrorHandlingMiddleware.<Invoke>d__4.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Middleware/ErrorHandlingMiddleware.cs:line 37
+-------------------------------------------------------------------------------------------------------------------------
+09:10:36 | Request finished in 14852.155ms 500 application/json
+-------------------------------------------------------------------------------------------------------------------------
+09:12:48 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+09:12:48 | Request finished in 223.185ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+09:12:54 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+09:12:54 | Request finished in 33.009ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+09:12:54 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+09:12:54 | Request finished in 182.259ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+09:13:16 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+09:13:16 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+09:13:20 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+09:14:02 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 46009.329ms
+-------------------------------------------------------------------------------------------------------------------------
+09:14:02 | POST | /api/Authorize/Auth/Email | Value cannot be null.
+Parameter name: value
+   at System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   at System.Security.Claims.Claim..ctor(String type, String value)
+   at CiklumTest.Services.LoginService.<GetIdentity>d__7.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Services/ILoginService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at CiklumTest.Controllers.AuthorizeController.<Email>d__3.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Controllers/AuthorizeController.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at CiklumTest.Middleware.ErrorHandlingMiddleware.<Invoke>d__4.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Middleware/ErrorHandlingMiddleware.cs:line 37
+-------------------------------------------------------------------------------------------------------------------------
+09:14:02 | Request finished in 46429.917ms 500 application/json
+-------------------------------------------------------------------------------------------------------------------------
+10:09:20 | Request starting HTTP/1.1 GET http://localhost:5000/  
+-------------------------------------------------------------------------------------------------------------------------
+10:09:20 | Request finished in 213.594ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Request starting HTTP/1.1 GET http://localhost:5000/swagger  
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Request finished in 7.723ms 301 
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Request finished in 38.104ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css  
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js  
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js  
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+-------------------------------------------------------------------------------------------------------------------------
+10:09:27 | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+-------------------------------------------------------------------------------------------------------------------------
+10:09:28 | Request finished in 553.495ms 200 application/javascript
+-------------------------------------------------------------------------------------------------------------------------
+10:09:28 | Request finished in 597.881ms 200 text/css
+-------------------------------------------------------------------------------------------------------------------------
+10:09:28 | Request finished in 732.881ms 200 application/javascript
+-------------------------------------------------------------------------------------------------------------------------
+10:09:28 | Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:09:28 | Request finished in 204.341ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:10:01 | Request starting HTTP/1.1 POST http://localhost:5000/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:10:01 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:10:01 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:10:02 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 1198.408ms
+-------------------------------------------------------------------------------------------------------------------------
+10:10:02 | POST | /api/Authorize/Auth/Email | Object reference not set to an instance of an object.
+   at CiklumTest.Services.LoginService.<GetIdentity>d__7.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Services/ILoginService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at CiklumTest.Controllers.AuthorizeController.<Email>d__3.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Controllers/AuthorizeController.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at CiklumTest.Middleware.ErrorHandlingMiddleware.<Invoke>d__4.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Middleware/ErrorHandlingMiddleware.cs:line 37
+-------------------------------------------------------------------------------------------------------------------------
+10:10:02 | Request finished in 1626.209ms 500 application/json
+-------------------------------------------------------------------------------------------------------------------------
+10:11:23 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:11:23 | Request finished in 231.497ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:11:29 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:11:29 | Request finished in 34.786ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:11:29 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:11:30 | Request finished in 198.969ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:11:55 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:11:55 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:12:03 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:12:24 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 29359.534ms
+-------------------------------------------------------------------------------------------------------------------------
+10:12:24 | POST | /api/Authorize/Auth/Email | Object reference not set to an instance of an object.
+   at CiklumTest.Services.LoginService.<GetIdentity>d__7.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Services/ILoginService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at CiklumTest.Controllers.AuthorizeController.<Email>d__3.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Controllers/AuthorizeController.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at CiklumTest.Middleware.ErrorHandlingMiddleware.<Invoke>d__4.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Middleware/ErrorHandlingMiddleware.cs:line 37
+-------------------------------------------------------------------------------------------------------------------------
+10:12:25 | Request finished in 29785.288ms 500 application/json
+-------------------------------------------------------------------------------------------------------------------------
+10:14:04 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:14:04 | Request finished in 345.146ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:14:09 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:14:09 | Request finished in 43.385ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:14:10 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:14:10 | Request finished in 189.414ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:14:29 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:14:29 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:14:33 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:14:34 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 4776.728ms
+-------------------------------------------------------------------------------------------------------------------------
+10:14:34 | POST | /api/Authorize/Auth/Email | Object reference not set to an instance of an object.
+   at CiklumTest.Services.LoginService.<GetIdentity>d__7.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Services/ILoginService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at CiklumTest.Controllers.AuthorizeController.<Email>d__3.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Controllers/AuthorizeController.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at CiklumTest.Middleware.ErrorHandlingMiddleware.<Invoke>d__4.MoveNext() in /Users/user/Projects/CiklumTest/CiklumTest/Middleware/ErrorHandlingMiddleware.cs:line 37
+-------------------------------------------------------------------------------------------------------------------------
+10:14:34 | Request finished in 5211.323ms 500 application/json
+-------------------------------------------------------------------------------------------------------------------------
+10:18:45 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:18:45 | Request finished in 339.658ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:18:51 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:18:51 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:18:54 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:19:06 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+10:19:06 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 15129.525ms
+-------------------------------------------------------------------------------------------------------------------------
+10:19:06 | Request finished in 15198.398ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:24:14 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:24:14 | Request finished in 334.596ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:24:17 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:24:17 | Request finished in 58.078ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:24:18 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:24:18 | Request finished in 201.986ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:24:37 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:24:37 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:24:37 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:24:37 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+10:24:37 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 463.097ms
+-------------------------------------------------------------------------------------------------------------------------
+10:24:37 | Request finished in 549.675ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:24:59 | Request starting HTTP/1.1 GET http://localhost:27945/api/User/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:24:59 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:24:59 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:24:59 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:24:59 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:25:00 | Executed action CiklumTest.Controllers.UserController.Get (CiklumTest) in 38.137ms
+-------------------------------------------------------------------------------------------------------------------------
+10:25:00 | Request finished in 76.12ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:28:31 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:28:31 | Request finished in 341.803ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:28:35 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:28:35 | Request finished in 66.109ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:28:36 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:28:37 | Request finished in 204.128ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:29:07 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:29:07 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:29:07 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:29:08 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+10:29:08 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 403.117ms
+-------------------------------------------------------------------------------------------------------------------------
+10:29:08 | Request finished in 488.466ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:29:37 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:29:37 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:29:37 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:29:37 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:29:37 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:29:37 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 36.597ms
+-------------------------------------------------------------------------------------------------------------------------
+10:29:37 | Request finished in 78.032ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:31:09 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:31:10 | Request finished in 324.568ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:31:16 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:31:16 | Request finished in 72.279ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:31:18 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:31:18 | Request finished in 212.649ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:31:37 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:31:37 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:31:37 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:31:37 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+10:31:37 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 451.381ms
+-------------------------------------------------------------------------------------------------------------------------
+10:31:37 | Request finished in 516.416ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:32:06 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:06 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:06 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:06 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:06 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:06 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 37.762ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:06 | Request finished in 75.243ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:33 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:33 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:33 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:33 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:33 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:33 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 62.45ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:33 | Request finished in 75.356ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 61.951ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Request finished in 93.54ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 80.907ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Request finished in 110.578ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 102.69ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:35 | Request finished in 117.718ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 65.826ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request finished in 97.998ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 100.921ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request finished in 133.372ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 63.349ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request finished in 92.975ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 100.938ms
+-------------------------------------------------------------------------------------------------------------------------
+10:32:36 | Request finished in 150.693ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:33:34 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:33:34 | Request finished in 328.4ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:33:40 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:33:41 | Request finished in 69.437ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:33:42 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:33:42 | Request finished in 207.759ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:34:00 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:34:00 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:34:05 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:34:06 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+10:34:06 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 5964.764ms
+-------------------------------------------------------------------------------------------------------------------------
+10:34:06 | Request finished in 6047.673ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:34:33 | Request starting HTTP/1.1 GET http://localhost:27945/api/User/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:34:33 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:34:33 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:34:33 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:34:33 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:34:33 | Executed action CiklumTest.Controllers.UserController.Get (CiklumTest) in 62.007ms
+-------------------------------------------------------------------------------------------------------------------------
+10:34:33 | Request finished in 100.146ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:41:51 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:41:51 | Request finished in 330.353ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:41:55 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:41:55 | Request finished in 58.531ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:41:57 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:41:57 | Request finished in 216.401ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:42:26 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:42:26 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:42:30 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:42:32 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+10:42:32 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 5769.311ms
+-------------------------------------------------------------------------------------------------------------------------
+10:42:32 | Request finished in 5851.359ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:43:44 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:43:44 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:43:44 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:43:44 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:43:44 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:43:44 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 76.878ms
+-------------------------------------------------------------------------------------------------------------------------
+10:43:44 | Request finished in 114.987ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:44:46 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:44:46 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:44:46 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:44:46 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:44:46 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:44:46 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 43.578ms
+-------------------------------------------------------------------------------------------------------------------------
+10:44:46 | Request finished in 55.799ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:56:23 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+10:56:23 | Request finished in 380.859ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+10:56:27 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+10:56:27 | Request finished in 59.044ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+10:56:28 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+10:56:28 | Request finished in 208.478ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:56:47 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+10:56:47 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+10:56:51 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+10:56:53 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+10:56:53 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 5655.132ms
+-------------------------------------------------------------------------------------------------------------------------
+10:56:53 | Request finished in 5720.34ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+10:57:20 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:57:20 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:57:20 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:57:20 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:57:20 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:57:20 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 80.129ms
+-------------------------------------------------------------------------------------------------------------------------
+10:57:20 | Request finished in 117.751ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | Successfully validated the token.
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 79.811ms
+-------------------------------------------------------------------------------------------------------------------------
+10:57:49 | Request finished in 91.156ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+08:00:15 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+08:00:15 | Request finished in 369.271ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+08:00:19 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+08:00:20 | Request finished in 46.778ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+08:00:21 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+08:00:21 | Request finished in 201.007ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+08:00:44 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+08:00:44 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+08:00:48 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+08:00:50 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+08:00:50 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 5725.421ms
+-------------------------------------------------------------------------------------------------------------------------
+08:00:50 | Request finished in 5802.526ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+08:01:24 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+08:01:24 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+08:01:24 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+08:01:24 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+08:01:24 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+08:01:24 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 76.624ms
+-------------------------------------------------------------------------------------------------------------------------
+08:01:24 | Request finished in 111.705ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+08:02:25 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+08:02:25 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+08:02:26 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+08:02:26 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+08:02:26 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+08:02:26 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 38.165ms
+-------------------------------------------------------------------------------------------------------------------------
+08:02:26 | Request finished in 67.473ms 401 
+-------------------------------------------------------------------------------------------------------------------------
+08:13:06 | Request starting HTTP/1.1 GET http://localhost:27945/api/values  
+-------------------------------------------------------------------------------------------------------------------------
+08:13:06 | Request finished in 311.592ms 404 
+-------------------------------------------------------------------------------------------------------------------------
+08:13:12 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/index.html  
+-------------------------------------------------------------------------------------------------------------------------
+08:13:12 | Request finished in 41.38ms 200 text/html
+-------------------------------------------------------------------------------------------------------------------------
+08:13:13 | Request starting HTTP/1.1 GET http://localhost:27945/swagger/v1/swagger.json  
+-------------------------------------------------------------------------------------------------------------------------
+08:13:13 | Request finished in 204.037ms 200 application/json;charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+08:13:34 | Request starting HTTP/1.1 POST http://localhost:27945/api/Authorize/Auth/Email application/json-patch+json 55
+-------------------------------------------------------------------------------------------------------------------------
+08:13:34 | Executing action method CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) with arguments (CiklumTest.Models.Identyty.LoginRequest) - ModelState is Valid
+-------------------------------------------------------------------------------------------------------------------------
+08:13:34 | Entity Framework Core 2.1.1-rtm-30846 initialized 'CiklumDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=___Shared_Database___ 
+-------------------------------------------------------------------------------------------------------------------------
+08:13:35 | Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+-------------------------------------------------------------------------------------------------------------------------
+08:13:35 | Executed action CiklumTest.Controllers.AuthorizeController.Email (CiklumTest) in 423.053ms
+-------------------------------------------------------------------------------------------------------------------------
+08:13:35 | Request finished in 487.418ms 200 application/json; charset=utf-8
+-------------------------------------------------------------------------------------------------------------------------
+08:14:18 | Request starting HTTP/1.1 GET http://localhost:27945/api/ToDo/Get  
+-------------------------------------------------------------------------------------------------------------------------
+08:14:18 | Authorization failed for user: (null).
+-------------------------------------------------------------------------------------------------------------------------
+08:14:18 | Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+-------------------------------------------------------------------------------------------------------------------------
+08:14:18 | Executing ChallengeResult with authentication schemes ().
+-------------------------------------------------------------------------------------------------------------------------
+08:14:18 | AuthenticationScheme: Bearer was challenged.
+-------------------------------------------------------------------------------------------------------------------------
+08:14:18 | Executed action CiklumTest.Controllers.ToDoController.Get (CiklumTest) in 59.553ms
+-------------------------------------------------------------------------------------------------------------------------
+08:14:18 | Request finished in 75.25ms 401 
+-------------------------------------------------------------------------------------------------------------------------

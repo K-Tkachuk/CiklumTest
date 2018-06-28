@@ -1,0 +1,10 @@
+/Users/user/Projects/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.deps.json
+/Users/user/Projects/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.runtimeconfig.json
+/Users/user/Projects/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.runtimeconfig.dev.json
+/Users/user/Projects/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.dll
+/Users/user/Projects/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.pdb
+/Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.csproj.CoreCompileInputs.cache
+/Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.AssemblyInfoInputs.cache
+/Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.AssemblyInfo.cs
+/Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.dll
+/Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.pdb
