@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CiklumTest.Models.Settings
 {
-    public class Settings
-    {
+	public class Settings
+	{
 		public AuthOptions AuthOptions { get; set; }
-    }
+	}
 }

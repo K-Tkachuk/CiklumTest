@@ -12752,17 +12752,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Projects/CiklumTest/CiklumTest/CiklumTest.csproj",
+      "projectUniqueName": "/Users/user/CiklumTest/CiklumTest/CiklumTest.csproj",
       "projectName": "CiklumTest",
-      "projectPath": "/Users/user/Projects/CiklumTest/CiklumTest/CiklumTest.csproj",
+      "projectPath": "/Users/user/CiklumTest/CiklumTest/CiklumTest.csproj",
       "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Projects/CiklumTest/CiklumTest/obj/",
+      "outputPath": "/Users/user/CiklumTest/CiklumTest/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/user/.nuget/NuGet/NuGet.Config"
+        "/Users/user/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -12784,26 +12784,28 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.0, )"
-          },
-          "Microsoft.EntityFrameworkCore.InMemory": {
-            "target": "Package",
-            "version": "[2.1.1, )"
-          },
-          "Microsoft.Extensions.Logging": {
-            "target": "Package",
-            "version": "[2.1.1, )"
-          },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0",
             "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.All": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
-            "version": "[2.5.0, )"
+            "version": "2.5.0"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "2.1.1"
+          },
+          "Microsoft.Extensions.Logging": {
+            "target": "Package",
+            "version": "2.1.1"
           }
         },
         "imports": [

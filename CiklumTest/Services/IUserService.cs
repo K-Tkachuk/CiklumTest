@@ -8,40 +8,40 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CiklumTest.Services
 {
-    public interface IUserService
-    {
+	public interface IUserService
+	{
 		Task<IEnumerable<User>> Get();
-        Task<int> Remove(int id);
+		Task<int> Remove(int id);
 		Task<int> Add(UserDTO items);
-    }
+	}
 
 	public class UserService : IUserService
-    {
-        readonly CiklumDbContext _db;
+	{
+		readonly CiklumDbContext _db;
 
 		public UserService(CiklumDbContext context)
-        {
-            _db = context;
-        }
+		{
+			_db = context;
+		}
 		public async Task<IEnumerable<User>> Get()
-        {
-            return await _db.Users.ToListAsync();
-        }
+		{
+			return await _db.Users.ToListAsync();
+		}
 
 		public async Task<int> Add(UserDTO item)
-        {
-            if (item is User obj)
-            {
-				_db.Users.Add(obj);            
-            }
+		{
+			if (item is User obj)
+			{
+				_db.Users.Add(obj);
+			}
 
-            return await _db.SaveChangesAsync();
-        }
-        
-        public async Task<int> Remove(int id)
-        {
+			return await _db.SaveChangesAsync();
+		}
+
+		public async Task<int> Remove(int id)
+		{
 			_db.Users.Remove(new User() { Id = id });
-            return await _db.SaveChangesAsync();
-        }      
+			return await _db.SaveChangesAsync();
+		}
 	}
 }

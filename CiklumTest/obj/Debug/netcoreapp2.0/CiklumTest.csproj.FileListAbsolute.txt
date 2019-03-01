@@ -8,3 +8,14 @@
 /Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.AssemblyInfo.cs
 /Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.dll
 /Users/user/Projects/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.pdb
+/Users/user/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.deps.json
+/Users/user/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.runtimeconfig.json
+/Users/user/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.runtimeconfig.dev.json
+/Users/user/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.dll
+/Users/user/CiklumTest/CiklumTest/bin/Debug/netcoreapp2.0/CiklumTest.pdb
+/Users/user/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.csprojResolveAssemblyReference.cache
+/Users/user/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.csproj.CoreCompileInputs.cache
+/Users/user/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.AssemblyInfoInputs.cache
+/Users/user/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.AssemblyInfo.cs
+/Users/user/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.dll
+/Users/user/CiklumTest/CiklumTest/obj/Debug/netcoreapp2.0/CiklumTest.pdb

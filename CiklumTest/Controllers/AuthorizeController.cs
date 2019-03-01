@@ -12,30 +12,30 @@ using Microsoft.Extensions.Options;
 
 namespace CiklumTest.Controllers
 {
-    [Route("api/[controller]")]
-    [Produces("application/json")]
-    public class AuthorizeController : Controller
-    {
+	[Route("api/[controller]")]
+	[Produces("application/json")]
+	public class AuthorizeController : Controller
+	{
 
-        private readonly Settings _settings;
-        private readonly ILoginService _loginService;
+		readonly Settings _settings;
+		readonly ILoginService _loginService;
 
-        public AuthorizeController(IOptions<Settings> settings, ILoginService loginService)
-        {
-            _settings = settings.Value;
-            _loginService = loginService;
-        }
+		public AuthorizeController(IOptions<Settings> settings, ILoginService loginService)
+		{
+			_settings = settings.Value;
+			_loginService = loginService;
+		}
 
-        /// <summary>
-        /// Авторизация пользователя по почте
-        /// </summary>
-        /// <returns></returns>
-        [HttpPost("Auth/Email")]
-        public async Task<IActionResult> Email([FromBody]LoginRequest model)
-        {
-            var identity = await _loginService.GetIdentity(model);
-            var token = await _loginService.CreateToken(identity);
-            return Ok(token);
-        }
-    }
+		/// <summary>
+		/// Авторизация пользователя по почте
+		/// </summary>
+		/// <returns></returns>
+		[HttpPost("Auth/Email")]
+		public async Task<IActionResult> Email([FromBody]LoginRequest model)
+		{
+			var identity = await _loginService.GetIdentity(model);
+			var token = await _loginService.CreateToken(identity);
+			return Ok(token);
+		}
+	}
 }

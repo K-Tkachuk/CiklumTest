@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{71C5D428-15B3-47C7-AE5D-BE6022DF3490}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/IUserService.cs">
+    <Files>
+      <File FileName="Controllers/AuthorizeController.cs" Line="20" Column="3" />
+      <File FileName="Controllers/ToDoController.cs" Line="22" Column="4" />
+      <File FileName="Extensions/CiklumTestException.cs" Line="18" Column="9" />
+      <File FileName="Extensions/EnumerationExtension.cs" Line="24" Column="4" />
+      <File FileName="Extensions/FileLoggerExtension.cs" Line="1" Column="1" />
+      <File FileName="Extensions/ServiceCollectionExtension.cs" Line="1" Column="1" />
+      <File FileName="Helpers/FileLogger.cs" Line="37" Column="133" />
+      <File FileName="Middleware/ErrorHandlingMiddleware.cs" Line="1" Column="1" />
+      <File FileName="Models/DBModels/CiklumDbContext.cs" Line="1" Column="1" />
+      <File FileName="Models/DBModels/CiklumDbInitializer.cs" Line="1" Column="1" />
+      <File FileName="Models/DBModels/ToDo.cs" Line="1" Column="1" />
+      <File FileName="Models/DBModels/User.cs" Line="18" Column="21" />
+      <File FileName="Models/DTO/ToDoDTO.cs" Line="1" Column="1" />
+      <File FileName="Models/DTO/UserDTO.cs" Line="1" Column="1" />
+      <File FileName="Models/Enums/Errors.cs" Line="1" Column="1" />
+      <File FileName="Models/Identyty/LoginRequest.cs" Line="1" Column="1" />
+      <File FileName="Models/Identyty/LoginResponse.cs" Line="1" Column="1" />
+      <File FileName="Models/Settings/AuthOptions.cs" Line="1" Column="1" />
+      <File FileName="Models/Settings/Settings.cs" Line="1" Column="1" />
+      <File FileName="Providers/FileLoggerProvider.cs" Line="26" Column="1" />
+      <File FileName="Services/ILoginService.cs" Line="57" Column="5" />
+      <File FileName="Services/IToDoService.cs" Line="1" Column="1" />
+      <File FileName="Services/IUserService.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CiklumTest PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
