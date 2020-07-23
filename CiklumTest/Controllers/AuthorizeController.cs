@@ -17,13 +17,13 @@ namespace CiklumTest.Controllers
 	public class AuthorizeController : Controller
 	{
 
-		readonly Settings _settings;
-		readonly ILoginService _loginService;
+		readonly Settings settings;
+		readonly ILoginService loginService;
 
 		public AuthorizeController(IOptions<Settings> settings, ILoginService loginService)
 		{
-			_settings = settings.Value;
-			_loginService = loginService;
+			this.settings = settings.Value;
+			this.loginService = loginService;
 		}
 
 		/// <summary>
@@ -33,8 +33,8 @@ namespace CiklumTest.Controllers
 		[HttpPost("Auth/Email")]
 		public async Task<IActionResult> Email([FromBody]LoginRequest model)
 		{
-			var identity = await _loginService.GetIdentity(model);
-			var token = await _loginService.CreateToken(identity);
+			var identity = await loginService.GetIdentity(model);
+			var token = await loginService.CreateToken(identity);
 			return Ok(token);
 		}
 	}

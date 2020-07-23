@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using CiklumTest.Models.DBModels;
 
-namespace CiklumTest.Models.DTO
+namespace CiklumTest.Models.ViewModels
 {
-    public class UserDTO
+    public class UserVM
     {
         public int Id { get; set; }
 

@@ -15,7 +15,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 using CiklumTest.Middleware;
-using System.Linq;
+using AutoMapper;
+using Microsoft.OpenApi.Models;
+using CiklumTest.Helpers;
 
 namespace CiklumTest
 {
@@ -31,11 +33,11 @@ namespace CiklumTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            ConfigureSettings<Settings>(services);
+            services.RegisterServices();
             services.AddDbContext<CiklumDbContext>(opt => opt.UseInMemoryDatabase());
             services.AddMvc();
-			ConfigureSettings<Settings>(services);
-            services.RegisterServices();
+            services.AddAutoMapper(typeof(AutoMapping));
 
             var settings = Configuration.GetSection("Settings").Get<Settings>();
 
@@ -63,14 +65,39 @@ namespace CiklumTest
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info
+                c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
                     Title = "CiklumTest API",
                     Description = "A sample API for testing and prototyping CiklumTest features"
 				});
-			
-				c.IncludeXmlComments("CiklumTest.WebApi.xml");
+                c.OperationFilter<AddAuthHeaderOperationFilter>();
+                c.AddSecurityDefinition("Authorization", new OpenApiSecurityScheme()
+                {
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Scheme = "bearer"
+
+                });
+
+                OpenApiSecurityScheme securityScheme = new OpenApiSecurityScheme()
+                {
+                    Reference = new OpenApiReference()
+                    {
+                        Id = "Authorization",
+                        Type = ReferenceType.SecurityScheme
+                    }
+                };
+                OpenApiSecurityRequirement securityRequirements = new OpenApiSecurityRequirement()
+                {
+                    {securityScheme, new string[] { }},
+                };
+
+
+                c.IncludeXmlComments("CiklumTest.WebApi.xml");
                 c.DescribeAllEnumsAsStrings();
             });
         }
@@ -84,6 +111,9 @@ namespace CiklumTest
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
+
+
             string folder = Directory.GetCurrentDirectory() + "//Logs";
             if (!Directory.Exists(folder))
             {
@@ -95,7 +125,8 @@ namespace CiklumTest
             app.UseMiddleware<ErrorHandlingMiddleware>();
 
             app.UseMvc();
-			app.UseAuthentication();
+			
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {

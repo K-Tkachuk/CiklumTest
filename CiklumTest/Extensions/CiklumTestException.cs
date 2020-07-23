@@ -33,7 +33,7 @@ namespace CiklumTest.Helpers
 					errorMessage = Errors.EmptyData.Description();
 					break;
 				case Errors.IncorrectEmailOrPassword:
-					statusCode = HttpStatusCode.Unauthorized;
+					statusCode = HttpStatusCode.BadRequest;
 					errorMessage = Errors.IncorrectEmailOrPassword.Description();
 					break;
 				case Errors.DataNotFound:
@@ -53,7 +53,7 @@ namespace CiklumTest.Helpers
 					errorMessage = Errors.InvalidToken.Description();
 					break;
 				default:
-					statusCode = HttpStatusCode.BadRequest;
+					statusCode = HttpStatusCode.InternalServerError;
 					errorMessage = Errors.SomethingWentWrong.Description();
 					break;
 			}

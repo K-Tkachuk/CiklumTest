@@ -3,74 +3,80 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using CiklumTest.Enums;
+using CiklumTest.Helpers;
 using CiklumTest.Models.DBModels;
-using CiklumTest.Models.DTO;
-using Microsoft.EntityFrameworkCore;
+using CiklumTest.Models.Enums;
+using CiklumTest.Models.ViewModels;
+using CiklumTest.Repositories.Interfaces;
 
 namespace CiklumTest.Services
 {
     public interface IToDoService
     {
-        Task<IEnumerable<ToDoDTO>> Get();
-        Task<int> Edit(ToDoDTO item);
-        Task<int> Remove(int id);
-        Task<int> Add(ToDoDTO items);
+        Task<ToDoVM> Get(int id);
+        Task<ToDoVM> Edit(ToDoVM item);
+        Task Remove(int id);
+        Task<ToDoVM> Add(CreateToDoVM item);
     }
 
     public class ToDoService : IToDoService
     {
-        readonly CiklumDbContext _db;
-		readonly LoginService _loginService;
+		private readonly ILoginService loginService;
+        private readonly IToDoRepository todoRepository;
+        private readonly IMapper mapper;
 
-		public ToDoService(CiklumDbContext context,LoginService loginService)
+        public ToDoService(
+            ILoginService loginService,
+            IToDoRepository todoRepository,
+            IMapper mapper)
         {
-            _db = context;
-			_loginService = loginService;
+            this.mapper = mapper;
+            this.todoRepository = todoRepository;
+            this.loginService = loginService;
         }
-        public async Task<IEnumerable<ToDoDTO>> Get()
+        public async Task<ToDoVM> Get(int id)
         {
-			return await _db.ToDos
-				            .Where(t=>t.UserId == _loginService.user.Id)
-				            .Select(t => new ToDoDTO()
-            {
-                Id = t.Id,
-                Header = t.Header,
-                Description = t.Description,
-                UserId = t.UserId
-            }).ToListAsync();
+            var todo = await todoRepository.GetById(id);
+
+            return mapper.Map<ToDoVM>(todo);
         }
         
-        public Task<int> Edit(ToDoDTO item)
+        public async Task<ToDoVM> Edit(ToDoVM item)
         {
-			var toDo = _db.ToDos
-			              .Where(t => t.Id == item.Id && t.UserId == _loginService.user.Id)
-			              .FirstOrDefault();
-			
-            if (toDo != null)
-            {
-                toDo.Description = item.Description;
-                toDo.Header = item.Header;
-                toDo.UserId = item.UserId;
-            }
-			return _db.SaveChangesAsync();
+            var toDo = await todoRepository.GetById(item.Id);
+            if (toDo == null)
+                throw new CiklumTestException(Errors.DataNotFound);
+
+            toDo.Description = item.Description;
+            toDo.Header = item.Header;
+            toDo.State = item.State;
+
+            todoRepository.Update(toDo);
+
+            await todoRepository.Save();
+
+            return await Task.FromResult(mapper.Map<ToDoVM>(toDo));
         }
 
-        public async Task<int> Add(ToDoDTO item)
-        {         
-			if (item is ToDo obj)
-			{
-				obj.UserId = _loginService.user.Id;
-				_db.ToDos.Add(obj);
+        public async Task<ToDoVM> Add(CreateToDoVM item)
+        {
+            var toDo = mapper.Map<ToDo>(item);
+           
+            toDo.UserId = loginService.GetUser().Id;
+            toDo.State = TaskState.New;
+            await todoRepository.Create(toDo);
 
-			}
+            await todoRepository.Save();
 
-			return await _db.SaveChangesAsync();
+            return await Task.FromResult(mapper.Map<ToDoVM>(toDo));
         }
 
-        public async Task<int> Remove(int id)
+        public Task Remove(int id)
         {
-			_db.ToDos.Remove(new ToDo() { Id = id ,UserId = _loginService.user.Id  });
-			return await _db.SaveChangesAsync();
+            todoRepository.Delete(id);
+			return todoRepository.Save();
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using CiklumTest.Models.DBModels;
-using CiklumTest.Models.DTO;
+using CiklumTest.Models.ViewModels;
 using CiklumTest.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,35 +15,36 @@ namespace CiklumTest.Controllers
 	[Route("api/[controller]")]
 	public class ToDoController : Controller
 	{
-		readonly IToDoService _toDoService;
+		private readonly IToDoService toDoService;
 
 		public ToDoController(IToDoService toDoService)
-		{
-			_toDoService = toDoService;
+		{ 
+			this.toDoService = toDoService;
 		}
 
-		[HttpGet("[action]")]
-		public async Task<IActionResult> Get()
+		[HttpGet("Get")]
+		public async Task<IActionResult> Get(int id)
 		{
-			return Ok(await _toDoService.Get());
+			return Ok(await toDoService.Get(id));
 		}
 
-		[HttpPost("[action]")]
-		public async Task<IActionResult> Add([FromBody] ToDoDTO data)
+		[HttpPost("Add")]
+		public async Task<IActionResult> Add([FromBody] CreateToDoVM data)
 		{
-			return Ok(await _toDoService.Add(data));
+			return Created("",await toDoService.Add(data));
 		}
 
-		[HttpPut("[action]")]
-		public async Task<IActionResult> Edit([FromBody] ToDoDTO data)
+		[HttpPut("Edit")]
+		public async Task<IActionResult> Edit([FromBody] ToDoVM data)
 		{
-			return Ok(await _toDoService.Edit(data));
+			return Ok(await toDoService.Edit(data));
 		}
 
-		[HttpDelete("[action]")]
+		[HttpDelete("Remove")]
 		public async Task<IActionResult> Remove(int id)
 		{
-			return Ok(await _toDoService.Remove(id));
+			await toDoService.Remove(id);
+			return Ok();
 		}
 	}
 }

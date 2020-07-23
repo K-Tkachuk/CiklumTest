@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using CiklumTest.Models.DBModels;
 using CiklumTest.Models.Identyty;
 using CiklumTest.Models.Settings;
-using System.IdentityModel.Tokens.Jwt;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using CiklumTest.Helpers;
 using CiklumTest.Enums;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Http;
 
 namespace CiklumTest.Services
 {
@@ -19,18 +20,27 @@ namespace CiklumTest.Services
 	{
 		Task<ClaimsIdentity> GetIdentity(LoginRequest model);
 		Task<LoginResponse> CreateToken(ClaimsIdentity identity);
+		User GetUser();
 	}
 
 	public class LoginService : ILoginService
 	{
-		readonly Settings _settings;
-		readonly CiklumDbContext _db;
-		public User user { get; private set; }
+		private readonly Settings _settings;
+		private readonly CiklumDbContext _db;
+		private readonly IHttpContextAccessor _httpContextAccessor;
 
-		public LoginService(IOptions<Settings> settingsOptions, CiklumDbContext context)
+		User user { get; set; }
+
+
+        public LoginService(IOptions<Settings> settingsOptions, CiklumDbContext context, IHttpContextAccessor httpContextAccessor)
 		{
+			_httpContextAccessor = httpContextAccessor;
 			_settings = settingsOptions.Value;
 			_db = context;
+
+			var email = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier);
+			if(email != null)
+				user = _db.Users.FirstOrDefault(x => x.Email == email.Value);
 		}
 
 		public async Task<ClaimsIdentity> GetIdentity(LoginRequest model)
@@ -69,5 +79,10 @@ namespace CiklumTest.Services
 				username = identity.Name
 			};
 		}
-	}
+
+        public User GetUser()
+        {
+			return user;
+        }
+    }
 }

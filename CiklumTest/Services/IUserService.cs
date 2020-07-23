@@ -2,46 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using CiklumTest.Enums;
+using CiklumTest.Helpers;
 using CiklumTest.Models.DBModels;
-using CiklumTest.Models.DTO;
+using CiklumTest.Models.ViewModels;
+using CiklumTest.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CiklumTest.Services
 {
 	public interface IUserService
 	{
-		Task<IEnumerable<User>> Get();
-		Task<int> Remove(int id);
-		Task<int> Add(UserDTO items);
+		Task<UserVM> Get(int id);
+		Task<UserVM> Add(CreateUserVM item);
+		Task Remove(int id);
 	}
 
 	public class UserService : IUserService
 	{
-		readonly CiklumDbContext _db;
+		private readonly IUserRepository userRepository;
+		private readonly IMapper mapper;
 
-		public UserService(CiklumDbContext context)
+		public UserService(IUserRepository userRepository,IMapper mapper)
 		{
-			_db = context;
+			this.mapper = mapper;
+			this.userRepository = userRepository;
 		}
-		public async Task<IEnumerable<User>> Get()
+		public async Task<UserVM> Get(int id)
 		{
-			return await _db.Users.ToListAsync();
+			return mapper.Map<UserVM>(await userRepository.GetById(id));
 		}
 
-		public async Task<int> Add(UserDTO item)
+		public async Task<UserVM> Add(CreateUserVM item)
 		{
-			if (item is User obj)
-			{
-				_db.Users.Add(obj);
+			User user = null;
+            try
+            {
+				 user = userRepository
+							.Find(u => u.Email == item.Email).FirstOrDefault();
 			}
+            catch(Exception ex)
+            {
+				var a = ex.Message;
+            }
 
-			return await _db.SaveChangesAsync();
+			if (user != null)
+				throw new CiklumTestException(Errors.UserExist);
+
+			user = mapper.Map<User>(item);
+
+			await userRepository.Create(user);
+			await userRepository.Save();
+
+			return await Task.FromResult(mapper.Map<UserVM>(user));
 		}
 
-		public async Task<int> Remove(int id)
-		{
-			_db.Users.Remove(new User() { Id = id });
-			return await _db.SaveChangesAsync();
+        public Task Remove(int id)
+        {
+			userRepository.Delete(id);
+			return userRepository.Save();
 		}
-	}
+    }
 }

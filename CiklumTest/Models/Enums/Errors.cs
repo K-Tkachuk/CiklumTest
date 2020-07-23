@@ -32,7 +32,11 @@ namespace CiklumTest.Enums
         [Display(Description = "InvalidToken" )]
         InvalidToken = 7,
 
+        [Display(Description = "UserExist")]
+        UserExist = 8,
+
         [Display(Description = "SomethingWentWrong" )]
-        SomethingWentWrong = 8
+        SomethingWentWrong = 9,
+       
     }
 }

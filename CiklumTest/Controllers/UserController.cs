@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
-using CiklumTest.Models.DTO;
+using CiklumTest.Models.ViewModels;
 using CiklumTest.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,29 +16,30 @@ namespace CiklumTest.Controllers
     [Route("api/[controller]")]
     public class UserController : Controller
     {
-		readonly IUserService _userService;
+        private readonly IUserService userService;
 
 		public UserController(IUserService userService)
         {
-			_userService = userService;
+			this.userService = userService;
         }
 
-        [HttpGet("[action]")]
-        public async Task<IActionResult> Get()
+        [HttpGet("Get")]
+        public async Task<IActionResult> Get(int id)
         {
-			return Ok(await _userService.Get());
+			return Ok(await userService.Get(id));
         }
         
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Add([FromBody] UserDTO data)
+        [HttpPost("Add")]
+        public async Task<IActionResult> Add([FromBody] CreateUserVM data)
         {
-			return Ok(await _userService.Add(data));
+            return Created("", await userService.Add(data));
         }
 
-        [HttpDelete("[action]")]
+        [HttpDelete("Remove")]
         public async Task<IActionResult> Remove(int id)
         {
-			return Ok(await _userService.Remove(id));
+            await userService.Remove(id);
+            return Ok();
         }
     }
 }
